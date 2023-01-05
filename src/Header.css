@@ -9,7 +9,7 @@
 .header_logo {
     display: flex;
     align-items: center;
-    color: #ff9900;
+    color: #febd67;
     margin: 0 25px;
 }
 
@@ -43,7 +43,7 @@
 .search_icon {
     padding: 5px;
     height: 22px !important;
-    background-color: #ff9f00;
+    background-color: #febd67;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -79,6 +79,6 @@
 }
 
 .cart_count {
-    margin-left: 26px;
+    margin-left: 27px;
     color: #ff9900;
 }
