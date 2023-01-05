@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import EmojiNatureIcon from '@mui/icons-material/EmojiNature';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* amazon logo */}
+      <div className="header_logo">
+        <EmojiNatureIcon className="header_logo_image" fontSize="large"></EmojiNatureIcon>
+        <h2 classname="header_logo_title">Buggy Boutique</h2>
+      </div>
+      {/* search bar */}
+      <div className="header_search">
+        
+      </div>
+      {/* navigation bar */}
+      <div className="header_nav_bar">
+        <div className="nav_item">
+          <span className="nav_itemOne">Hello Guest</span>
+          <span className="nav_itemTwo">Sign In</span>
+        </div> 
+        <div className="nav_item">
+          <span className="nav_itemOne">Your</span>
+          <span className="nav_itemTwo">Shop</span>
+        </div>
+        <div className="nav_item">
+          <AddShoppingCartIcon></AddShoppingCartIcon>
+          <span className="nav_itemTwo">0</span>
+        </div>
+      </div>
     </div>
   );
 }
