@@ -21,17 +21,17 @@ function Home() {
                     <div className="home_row">
                         <Product 
                             id="987654321"
-                            title="Corduroy P-Ants"
+                            title="Corduroy P-ants"
                             price={11.86}
                             rating={4}
-                            
+                            image={require('./pants.png')}
                         />
                         <Product
                             id="021021021"
                             title="Nectar Skirt"
                             price={33.33}
                             rating={3}
-
+                            image={require('./skirt.png')}
                         />
                     </div>
                     <div className="home_row">
@@ -51,10 +51,10 @@ function Home() {
                         />
                         <Product 
                             id="909090909"
-                            title="Hydrangea Hat"
+                            title="Hydrangea Hairclip"
                             price={6.13}
                             rating={4}
-
+                            image={require('./hairclip.png')}
                         />
                     </div>
                 </div>
