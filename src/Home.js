@@ -39,15 +39,15 @@ function Home() {
                             id="123456789"
                             title="Grass Top"
                             price={9.72}
-                            rating={1}
-
+                            rating={5}
+                            image={require('./shirt.png')}
                         />
                         <Product 
                             id="010101010"
-                            title="Bee-shirt"
-                            price={17.54}
-                            rating={2}
-
+                            title="Lovebug Necklace"
+                            price={475.00}
+                            rating={3}
+                            image={require('./necklace.png')}
                         />
                         <Product 
                             id="909090909"
