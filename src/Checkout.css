@@ -8,6 +8,7 @@
 .advertisement {
     width: 100%;
     margin-left: 15%;
+    border: solid 1px lightgray;
 }
 
 .shopping_cart {

@@ -8,6 +8,7 @@
     padding-bottom: 30px;
     background-color: white;
     margin-top: 66.5%;
+    font-weight: 550;
 }
 
 .subtotal_text {
@@ -33,4 +34,5 @@
     height: 35px;
     padding: 10px;
     color: #111;
+    font-weight: 500;
 }
