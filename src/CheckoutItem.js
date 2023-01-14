@@ -1,21 +1,35 @@
 import React from 'react'
 import "./CheckoutItem.css"
+import {useStateValue} from "./StateProvider";
 
-function CheckoutItem() {
+function CheckoutItem({id, image, title, price, rating}) {
+    const [{cart}, dispatch] = useStateValue();
+    
+    const removeFromCart = () => {
+        dispatch({
+            type: "REMOVE_FROM_CART",
+            id: id
+        })
+    }
     return (
         <div className="checkout_item">
-            <img src="https://s3-alpha.figma.com/hub/file/948140848/1f4d8ea7-e9d9-48b7-b70c-819482fb10fb-cover.png" className="checkout_item_img"/>
+            <img src={image} className="checkout_item_img"/>
 
             <div className="checkout_item_info">
-                <p className="checkout_item_title">Placeholder Item</p>
+                <p className="checkout_item_title">{title}</p>
                 <p className="checkout_item_price">
                     <small>$</small>
-                    <strong>13</strong>
+                    <strong>{price}</strong>
                 </p>
                 <div className="checkout_item_rating">
-                    ★★★★★
+                    {Array(rating)
+                        .fill()
+                        .map((_, i) => (
+                            <p>★</p>
+                        ))
+                    }
                 </div>
-                <button>Remove from Cart</button>
+                <button onClick={removeFromCart}>Remove from Cart</button>
             </div>
         </div>
     )
