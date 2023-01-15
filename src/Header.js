@@ -5,7 +5,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Link } from "react-router-dom";
 import "./Header.css";
 import {useStateValue} from "./StateProvider";
-import { SportsBasketball } from "@mui/icons-material";
 
 function Header() {
     // update cart count with # of items
@@ -26,10 +25,12 @@ function Header() {
             </div>
             {/* navigation bar */}
             <div className="header_nav_bar">
-                <div className="nav_item">
-                    <span className="nav_item_one">Hello, Bug</span>
-                    <span className="nav_item_two">Sign In ▾</span>
-                </div>
+                <Link to="/signin" style={{ textDecoration:"none" }}>
+                    <div className="nav_item">
+                        <span className="nav_item_one">Hello, Bug</span>
+                        <span className="nav_item_two">Sign In ▾</span>
+                    </div>
+                </Link>
                 <div className="nav_item">
                     <span className="nav_item_one">Returns</span>
                     <span className="nav_item_two">& Orders</span>
