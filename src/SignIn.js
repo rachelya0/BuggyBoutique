@@ -3,7 +3,7 @@ import './SignIn.css'
 import { Link, useHistory } from "react-router-dom";
 import EmojiNatureIcon from '@mui/icons-material/EmojiNature';
 import { auth } from "./firebase";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
 
 function SignIn() {
     const history = useHistory();
@@ -13,7 +13,6 @@ function SignIn() {
     const signIn = e => {
         e.preventDefault();
 
-        const auth = getAuth();
             signInWithEmailAndPassword(auth, email, password)
             .then(auth => {
                 history.push('/');
@@ -25,7 +24,6 @@ function SignIn() {
     const register = e => {
         e.preventDefault();
 
-        const auth = getAuth();
             createUserWithEmailAndPassword(auth, email, password)
             .then((auth) => {
                 if (auth) {
